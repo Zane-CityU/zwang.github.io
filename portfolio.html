@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集 - 王子寒</title> <!-- 替换姓名 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏：全站通用 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">王子寒</a> <!-- 替换姓名 -->
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于我</a></li>
+        <li><a href="portfolio.html">作品集</a></li>
+        <li><a href="#contact">联系方式</a></li>
+        <li><a href="files/个人简历-王子寒-ZH.pdf" download class="btn resume-btn">下载简历</a></li> <!-- 替换简历文件名 -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 作品集列表：核心，卡片式，带单作品跳转 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">我的作品集</h2>
+      <div class="portfolio-wrap">
+        <!-- 作品1：跳转至portfolio-1.html，可新增 -->
+        <div class="portfolio-card">
+          <img src="images/portfolio1.jpg" alt="作品1封面" class="portfolio-cover"> <!-- 替换作品封面图 -->
+          <div class="portfolio-card-content">
+            <h3 class="portfolio-card-title">【作品1名称】</h3> <!-- 替换作品名称 -->
+            <p class="portfolio-card-desc">【作品简短说明：如小红书种草笔记合集，聚焦美妆赛道，负责选题、撰写、排版，单篇最高点赞800+，累计曝光50w+】</p> <!-- 替换简短说明 -->
+            <a href="portfolio-1.html" class="btn">查看详情</a> <!-- 跳转至单作品展示页 -->
+          </div>
+        </div>
+        <!-- 作品2：跳转至portfolio-2.html -->
+        <div class="portfolio-card">
+          <img src="images/portfolio2.jpg" alt="作品2封面" class="portfolio-cover"> <!-- 替换作品封面图 -->
+          <div class="portfolio-card-content">
+            <h3 class="portfolio-card-title">【作品2名称】</h3> <!-- 替换作品名称 -->
+            <p class="portfolio-card-desc">【作品简短说明：如品牌线上活动策划案，负责活动文案、流程设计、落地执行，活动参与人数超1000人，转化率达25%】</p> <!-- 替换简短说明 -->
+            <a href="portfolio-2.html" class="btn">查看详情</a> <!-- 跳转至单作品展示页 -->
+          </div>
+        </div>
+        <!-- 新增作品：复制上面的portfolio-card代码块，修改内容和跳转链接即可 -->
+          <div class="portfolio-card">
+          <img src="images/portfolio3.jpg" alt="作品3封面" class="portfolio-cover"> <!-- 替换作品封面图 -->
+          <div class="portfolio-card-content">
+            <h3 class="portfolio-card-title">【作品3名称】</h3> <!-- 替换作品名称 -->
+            <p class="portfolio-card-desc">【作品简短说明：如品牌线上活动策划案，负责活动文案、流程设计、落地执行，活动参与人数超1000人，转化率达25%】</p> <!-- 替换简短说明 -->
+            <a href="portfolio-3.html" class="btn">查看详情</a> <!-- 跳转至单作品展示页 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">联系方式</h2>
+      <div class="contact-wrap">
+        <p>邮箱：<span>【你的邮箱】@163.com</span></p> <!-- 替换邮箱 -->
+        <p>电话：<span>【你的手机号】</span></p> <!-- 替换手机号 -->
+        <p>微信：<span>【你的微信号（可选）】</span></p> <!-- 替换微信号 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 【你的姓名】 版权所有 | 个人应聘专属网站</p> <!-- 替换姓名 -->
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

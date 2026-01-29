@@ -1,0 +1,424 @@
+/* —————— 全局基础样式：重置默认样式，定义核心配色和字体 —————— */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "思源黑体", "微软雅黑", Inter, Arial, sans-serif;
+}
+/* 页面渐变背景，打造轻层次感，低饱和不刺眼 */
+body {
+  background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+  color: #1f2937; /* 主文字色：深灰，比纯黑更柔和 */
+  line-height: 1.7; /* 行间距，提升阅读体验 */
+  scroll-behavior: smooth; /* 全局平滑滚动 */
+}
+/* 通用容器：限制宽度，居中显示，左右留白，所有板块都用这个容器 */
+.container {
+  width: 90%;
+  max-width: 1140px; /* 电脑端最大宽度，避免内容过宽 */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* 通用链接样式 */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease; /* 所有链接动效过渡，更柔和 */
+}
+/* 通用按钮样式：圆角、阴影、hover动效，打造层次感 */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #2563eb; /* 主色：低饱和蓝，专业适配应聘 */
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #1d4ed8; /* 按钮hover加深，立体 */
+  transform: translateY(-2px); /* 轻微上移，打造悬浮感 */
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+}
+/* 通用板块标题：底部下划线，居中，分层间距 */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  color: #1f2937;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px; /* 下划线圆角，更精致 */
+}
+/* 隐藏元素通用类 */
+.hidden {
+  display: none !important;
+}
+
+/* —————— 导航栏样式：固定顶部，吸顶阴影，全站通用 —————— */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 轻阴影，分层 */
+  z-index: 999; /* 保证导航在最上层 */
+  padding: 16px 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 导航logo（你的姓名） */
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 1px;
+}
+/* 导航链接列表 */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* 间距替代margin，更易控制 */
+  align-items: center;
+}
+.nav-links a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5563;
+}
+.nav-links a:hover {
+  color: #2563eb; /* hover变主色，有交互 */
+}
+/* 简历下载按钮（导航栏） */
+.resume-btn {
+  padding: 8px 18px;
+}
+
+/* —————— 通用板块间距：所有页面板块统一间距，分层 —————— */
+.section {
+  padding: 120px 0; /* 上下大间距，打造板块分层 */
+}
+/* 极简板块（如首页、单作品页头部） */
+.section-simple {
+  padding: 140px 0 80px; /* 适配固定导航，顶部多留间距 */
+  text-align: center;
+}
+
+/* —————— 底部样式：全站通用，深色背景，和主体分层 —————— */
+.footer {
+  background: #1f2937;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+/* —————— 首页专属样式：极简、居中、层次感 —————— */
+.home-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); /* 头像立体阴影 */
+  margin-bottom: 30px;
+}
+.home-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.home-desc {
+  font-size: 18px;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.home-intention {
+  font-size: 17px;
+  font-weight: 500;
+  color: #2563eb;
+  padding: 8px 20px;
+  border: 2px solid #2563eb;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* —————— 关于我页面样式：技能卡片+经历时间轴，分层立体感 —————— */
+/* 技能区：卡片式，网格布局，hover动效 */
+.skills-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.skill-card {
+  background: white;
+  padding: 25px 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.skill-card span {
+  font-size: 17px;
+  font-weight: 500;
+}
+/* 经历区：时间轴，左侧竖线，卡片分层 */
+.experience-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 时间轴左侧竖线：核心分层元素 */
+.experience-wrap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #e5e7eb;
+}
+.experience-item {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  width: 45%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.experience-item:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+/* 时间轴左右交替排列 */
+.experience-item:nth-child(odd) {
+  left: 0;
+}
+.experience-item:nth-child(even) {
+  left: 55%;
+}
+/* 时间轴圆点：连接竖线和卡片，分层 */
+.experience-item::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 4px solid white;
+  box-shadow: 0 0 0 2px #e5e7eb;
+}
+.experience-item:nth-child(odd)::after {
+  right: -38px;
+}
+.experience-item:nth-child(even)::after {
+  left: -38px;
+}
+.experience-time {
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+.experience-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.experience-desc {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* —————— 作品集页面样式：列表卡片+单作品展示，强层次感 —————— */
+/* 作品列表：网格布局，自适应列数 */
+.portfolio-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+/* 作品卡片：圆角、阴影、溢出隐藏，hover动效 */
+.portfolio-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+/* 作品封面图：固定高度，统一比例 */
+.portfolio-cover {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+/* 作品卡片内容区：留白，分层 */
+.portfolio-card-content {
+  padding: 25px;
+}
+.portfolio-card-title {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.portfolio-card-desc {
+  color: #4b5563;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+/* 单作品展示页：高清图+详情，分层排版 */
+.work-detail-img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 40px;
+  display: block;
+}
+.work-detail-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.work-detail-sub {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+.work-detail-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4b5563;
+  line-height: 1.8;
+}
+.work-detail-desc h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 25px 0 10px;
+}
+/* 回到作品集列表按钮 */
+.back-btn {
+  margin-top: 40px;
+}
+
+/* —————— 联系方式样式：全站通用，卡片式，分层 —————— */
+.contact-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.contact-wrap p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+.contact-wrap p span {
+  color: #4b5563;
+  margin-left: 10px;
+}
+
+/* —————— 移动端适配：768px以下自动调整，保证体验 —————— */
+@media (max-width: 768px) {
+  /* 导航栏：简化间距 */
+  .nav-links {
+    gap: 20px;
+  }
+  .navbar .logo {
+    font-size: 20px;
+  }
+  .resume-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  /* 通用样式：缩小间距，适配手机 */
+  .section {
+    padding: 80px 0;
+  }
+  .section-simple {
+    padding: 120px 0 60px;
+  }
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  /* 首页：缩小头像，调整文字 */
+  .home-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .home-title {
+    font-size: 32px;
+  }
+  .home-desc {
+    font-size: 16px;
+  }
+  /* 关于我：时间轴改为单列，取消交替 */
+  .experience-wrap::before {
+    left: 20px;
+  }
+  .experience-item {
+    width: 90%;
+    left: 0 !important;
+    margin-left: 40px;
+  }
+  .experience-item::after {
+    left: -38px !important;
+  }
+  /* 作品集：列表改为单列，缩小图片高度 */
+  .portfolio-wrap {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-cover {
+    height: 180px;
+  }
+  /* 单作品页：缩小文字，调整间距 */
+  .work-detail-title {
+    font-size: 28px;
+  }
+  .work-detail-img {
+    width: 100%;
+  }
+  /* 联系方式：缩小内边距 */
+  .contact-wrap {
+    padding: 30px 20px;
+  }
+  .contact-wrap p {
+    font-size: 16px;
+  }
+}
