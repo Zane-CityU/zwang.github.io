@@ -3,80 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我 - 王子寒</title> <!-- 替换姓名 -->
+  <meta name="description" content="王子寒 - 关于我：技能、教育背景、工作经历介绍。汉语言文学应届生，擅长文案撰写、新媒体运营、活动策划。">
+  <meta name="keywords" content="王子寒, 个人简历, 技能, 经历, 新媒体运营">
+  <meta name="author" content="王子寒">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="关于我 - 王子寒">
+  <meta property="og:description" content="了解王子寒的技能、教育背景和工作经历。">
+  
+  <link rel="icon" type="image/jpeg" href="images/证件照.jpg">
+  <title>关于我 - 王子寒</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 导航栏：和首页完全一致，无需修改 -->
-  <nav class="navbar">
+  <!-- 移动端菜单遮罩 -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" role="navigation" aria-label="主导航">
     <div class="container">
-      <a href="index.html" class="logo">王子寒</a> <!-- 替换姓名 -->
-      <ul class="nav-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="about.html">关于我</a></li>
-        <li><a href="portfolio.html">作品集</a></li>
-        <li><a href="#contact">联系方式</a></li>
-        <li><a href="files/个人简历-王子寒-ZH.pdf" download class="btn resume-btn">下载简历</a></li> <!-- 替换简历文件名 -->
+      <a href="index.html" class="logo" aria-label="返回首页">王子寒</a>
+      
+      <div class="menu-toggle" aria-label="菜单" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">首页</a></li>
+        <li role="none"><a href="about.html" role="menuitem">关于我</a></li>
+        <li role="none"><a href="portfolio.html" role="menuitem">作品集</a></li>
+        <li role="none"><a href="#contact" role="menuitem">联系方式</a></li>
+        <li role="none"><a href="files/个人简历-王子寒-ZH.pdf" download class="btn resume-btn" role="menuitem">下载简历</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- 技能区：核心能力，可增删skill-card代码块 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">我的技能</h2>
-      <div class="skills-wrap">
-        <div class="skill-card"><span>文案撰写</span></div>
-        <div class="skill-card"><span>新媒体运营</span></div>
-        <div class="skill-card"><span>活动策划</span></div>
-        <div class="skill-card"><span>数据分析</span></div>
-        <div class="skill-card"><span>PPT制作</span></div>
-        <div class="skill-card"><span>小红书运营</span></div>
-        <!-- 新增技能：复制上面一行，修改文字即可 -->
-      </div>
-    </div>
-  </section>
-
-  <!-- 经历区：时间轴，可增删experience-item代码块 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">过往经历</h2>
-      <div class="experience-wrap">
-        <!-- 经历1 -->
-        <div class="experience-item">
-          <span class="experience-time">2024.06 - 2024.09</span>
-          <h3 class="experience-title">【某互联网公司】- 新媒体运营实习生</h3> <!-- 替换经历名称 -->
-          <p class="experience-desc">【替换经历详情：负责小红书、公众号内容撰写与排版，累计发布笔记30篇、推文15篇，单篇小红书最高曝光10w+，带动店铺转化率提升18%；参与2次线上活动策划，完成活动文案与落地执行，活动参与率超20%】</p>
+  <main>
+    <!-- 技能区 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">我的技能</h2>
+        <div class="skills-wrap">
+          <div class="skill-card"><span>文案撰写</span></div>
+          <div class="skill-card"><span>视频与图片编辑</span></div>
+          <div class="skill-card"><span>活动策划</span></div>
+          <div class="skill-card"><span>公众号运营</span></div>
+          <div class="skill-card"><span>R Studio</span></div>
+          <div class="skill-card"><span>SPSS</span></div>
+          <div class="skill-card"><span>Microsoft Office</span></div>
+          <div class="skill-card"><span>Python</span></div>
         </div>
-        <!-- 经历2 -->
-        <div class="experience-item">
-          <span class="experience-time">2023.09 - 2024.06</span>
-          <h3 class="experience-title">【学校文学社】- 编辑部部长</h3> <!-- 替换经历名称 -->
-          <p class="experience-desc">【替换经历详情：负责校园刊物的内容征集、审核与排版，每月产出1期刊物，累计发行5000+册；组织3次校园征文活动，吸引200+同学参与，提升社团影响力】</p>
-        </div>
-        <!-- 新增经历：复制上面的experience-item代码块，修改内容即可 -->
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 联系方式 -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">联系方式</h2>
-      <div class="contact-wrap">
-        <p>邮箱：<span>【你的邮箱】@163.com</span></p> <!-- 替换邮箱 -->
-        <p>电话：<span>【你的手机号】</span></p> <!-- 替换手机号 -->
-        <p>微信：<span>【你的微信号（可选）】</span></p> <!-- 替换微信号 -->
+    <!-- 教育背景 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">教育背景</h2>
+        <div class="experience-wrap">
+          <div class="experience-item">
+            <span class="experience-time">2021.09 - 2025.06</span>
+            <h3 class="experience-title">安徽大学 - 应用物理学（本科）</h3>
+            <p class="experience-desc">主修课程(A+)：应用微积分、波和光学、经典物理学实验、现代物理学实验。在校期间荣获国家励志奖学金，以及优秀学生干部、优秀毕业生等称号。</p>
+          </div>
+          <div class="experience-item">
+            <span class="experience-time">2025.09 - 2026.10</span>
+            <h3 class="experience-title">香港城市大学 - 公共政策与管理学（硕士）</h3>
+            <p class="experience-desc">主修课程(A)：公共政策与管理的研究方法、人力资源管理、政府与公共治理理论。在校期间荣获2025-2026粤港澳大湾区公共治理数据分析大赛优秀创新奖。</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- 经历区 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">过往经历</h2>
+        <div class="experience-wrap">
+          <div class="experience-item">
+            <span class="experience-time">2026.04 - 至今</span>
+            <h3 class="experience-title">深圳市发展和改革委员会-国家高技术产业创新中心（深圳发展改革研究院） - 实习生</h3>
+            <p class="experience-desc">协助研究深圳市内外/各区的社会民生、生产生活服务业、现代产业体系、五年规划等课题；负责资料搜集、数据分析及更新、参与企业调研、专家座谈及研究报告撰写；协助微信公众平台运营工作，包括选题、写作、排版、发布等</p>
+          </div>
+          <div class="experience-item">
+            <span class="experience-time">2026.01 - 2026.03</span>
+            <h3 class="experience-title">字节跳动有限公司 - 产品助理</h3>
+            <p class="experience-desc">协助产品部门进行数据收集、提出优化方案，使团队工作效率提升50%以上。负责某保密项目的数据标注与分析，绩效指标通过率达90%以上。</p>
+          </div>
+          <div class="experience-item">
+            <span class="experience-time">2025.10 - 至今</span>
+            <h3 class="experience-title">香港城市大学-学生发展中心&人文与社会科学学院 - 学生助理</h3>
+            <p class="experience-desc">协助开展学生活动，负责后勤支持工作，参与组织10+大型活动（创新香港、求职讲座、迎新晚会）。负责搭建学校与研究生群体之前的沟通桥梁，定期参与委员会会议，收集统计相关学生信息反馈。</p>
+          </div>
+          <div class="experience-item">
+            <span class="experience-time">2025.03 - 2025.06</span>
+            <h3 class="experience-title">上海循闻科技有限公司 - AI项目实习生</h3>
+            <p class="experience-desc">负责10余名团队成员的培训，设计结构化方法，利用LatTex语言将项目数据处理效率提高50%。管理3个部门项目，协助资源配置，开展每日项目关键指标汇报，为决策提供依据。</p>
+          </div>
+          <div class="experience-item">
+            <span class="experience-time">2023.03 - 2025.06</span>
+            <h3 class="experience-title">安徽大学-纽约石溪学院 - 学生助理</h3>
+            <p class="experience-desc">负责运营学院新媒体平台，定期推送宣传内容，保持每月20%的关注增量。负责新闻采编、校对、发布全流程，累计产出发布内容20余篇，最高阅读量突破1000。负责10+大型活动（学术论坛、开学典礼、节日晚会等）的策划与后勤工作。协助教职工处理其他办公任务，以及上级领导交办的各类事项。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">联系方式</h2>
+        <div class="contact-wrap">
+          <p><span class="contact-icon">📧</span> 邮箱：<span>Zihan1927@Outlook.com</span></p>
+          <p><span class="contact-icon">📱</span> 电话：<span>+86-156-5537-9189/+852-4490-8056</span></p>
+          <p><span class="contact-icon">💬</span> 微信：<span>asakawa2134020115</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- 底部 -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 【你的姓名】 版权所有 | 个人应聘专属网站</p> <!-- 替换姓名 -->
+      <p>© 2026 王子寒 版权所有 | 个人应聘专属网站</p>
     </div>
   </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" aria-label="返回顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
